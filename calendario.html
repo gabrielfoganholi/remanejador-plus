@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calendário - Remanejador+</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex bg-blue-50 min-h-screen font-sans">
+
+  <!-- Sidebar -->
+  <aside class="w-64 bg-[#0D1B2A] text-white min-h-screen p-6">
+    <div class="flex items-center mb-10">
+      <img src="assets/pluslogo.png" alt="Logo" class="h-10 mr-2">
+    </div>
+    <nav class="space-y-4">
+      <a href="dashboard.html" class="block py-2 px-4 rounded hover:bg-blue-800">🏠 Dashboard</a>
+      <a href="professores.html" class="block py-2 px-4 rounded hover:bg-blue-800">👨‍🏫 Professores</a>
+      <a href="salas.html" class="block py-2 px-4 rounded hover:bg-blue-800">🏫 Salas</a>
+      <a href="horarios.html" class="block py-2 px-4 rounded hover:bg-blue-800">📅 Horários</a>
+      <a href="formulario.html" class="block py-2 px-4 rounded hover:bg-blue-800">📝 Formulário</a>
+      <a href="calendario.html" class="block py-2 px-4 rounded bg-blue-900">📆 Calendário</a>
+      <a href="login.html" class="block py-2 px-4 rounded hover:bg-red-700 text-red-300 mt-8">🚪 Sair</a>
+    </nav>
+  </aside>
+
+  <!-- Conteúdo -->
+  <main class="flex-1 p-6">
+    <h2 class="text-2xl font-bold text-[#0D1B2A] mb-6">📆 Calendário de Eventos</h2>
+
+    <div class="bg-white p-6 rounded-xl shadow-md w-full max-w-4xl">
+      <p class="mb-4 text-gray-600">Aqui você pode visualizar os principais eventos da escola:</p>
+
+      <table class="w-full table-auto border border-gray-200">
+        <thead>
+          <tr class="bg-blue-100 text-blue-900">
+            <th class="px-4 py-2 border">Data</th>
+            <th class="px-4 py-2 border">Evento</th>
+            <th class="px-4 py-2 border">Descrição</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="hover:bg-blue-50">
+            <td class="px-4 py-2 border">15/04/2025</td>
+            <td class="px-4 py-2 border">Reunião Pedagógica</td>
+            <td class="px-4 py-2 border">Planejamento trimestral com todos os professores.</td>
+          </tr>
+          <tr class="hover:bg-blue-50">
+            <td class="px-4 py-2 border">25/04/2025</td>
+            <td class="px-4 py-2 border">Simulado 1º Bimestre</td>
+            <td class="px-4 py-2 border">Aplicação do simulado para todas as turmas.</td>
+          </tr>
+          <tr class="hover:bg-blue-50">
+            <td class="px-4 py-2 border">01/05/2025</td>
+            <td class="px-4 py-2 border">Feriado - Dia do Trabalhador</td>
+            <td class="px-4 py-2 border">Escola fechada.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <script>
+    const usuarioLogado = localStorage.getItem("logado");
+    if (!usuarioLogado) {
+      window.location.href = "login.html";
+    }
+  </script>
+</body>
+</html>

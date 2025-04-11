@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - Colégio Plus</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#E5EAF5] flex items-center justify-center min-h-screen">
+
+  <div class="bg-white p-8 rounded-xl shadow-md w-full max-w-sm border-t-8 border-[#0D1B2A]">
+    <!-- Logo do Colégio Plus -->
+    <div class="flex justify-center mb-4">
+      <img src="./assets/pluslogo.png" alt="Logo Colégio Plus" class="h-16">
+    </div>
+
+    <h1 class="text-xl font-bold text-[#0D1B2A] mb-6 text-center">Bem-vindo ao Remanejador+</h1>
+
+    <form id="loginForm" class="space-y-4">
+      <div>
+        <label class="block text-sm font-medium text-[#0D1B2A]">Usuário</label>
+        <input type="text" id="usuario" class="w-full mt-1 p-2 border rounded focus:outline-none focus:ring-2 focus:ring-[#0D1B2A]" required />
+      </div>
+
+      <div>
+        <label class="block text-sm font-medium text-[#0D1B2A]">Senha</label>
+        <input type="password" id="senha" class="w-full mt-1 p-2 border rounded focus:outline-none focus:ring-2 focus:ring-[#0D1B2A]" required />
+      </div>
+
+      <button type="submit"
+        class="w-full bg-[#0D1B2A] hover:bg-[#1b2d47] text-white py-2 rounded transition duration-300 font-semibold">
+        Entrar
+      </button>
+
+      <p id="erro" class="text-red-600 text-sm mt-2 hidden">Usuário ou senha inválidos.</p>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const usuario = document.getElementById("usuario").value;
+      const senha = document.getElementById("senha").value;
+
+      if (usuario === "admin" && senha === "1234") {
+        localStorage.setItem("logado", "true");
+        window.location.href = "dashboard.html";
+      } else {
+        document.getElementById("erro").classList.remove("hidden");
+      }
+    });
+  </script>
+
+</body>
+</html>

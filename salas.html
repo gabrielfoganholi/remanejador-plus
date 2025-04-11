@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Salas - Remanejador+</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex bg-blue-50 min-h-screen font-sans">
+
+  <!-- Sidebar -->
+  <aside class="w-64 bg-[#0D1B2A] text-white min-h-screen p-6">
+    <div class="flex items-center mb-10">
+      <img src="assets/pluslogo.png" alt="Logo" class="h-10 mr-2">
+    </div>
+    <nav class="space-y-4">
+      <a href="dashboard.html" class="block py-2 px-4 rounded hover:bg-blue-800">🏠 Dashboard</a>
+      <a href="professores.html" class="block py-2 px-4 rounded hover:bg-blue-800">👨‍🏫 Professores</a>
+      <a href="salas.html" class="block py-2 px-4 rounded bg-blue-900">🏫 Salas</a>
+      <a href="horarios.html" class="block py-2 px-4 rounded hover:bg-blue-800">📅 Horários</a>
+      <a href="formulario.html" class="block py-2 px-4 rounded hover:bg-blue-800">📝 Formulário</a>
+      <a href="calendario.html" class="block py-2 px-4 rounded hover:bg-blue-800">📆 Calendário</a>
+      <a href="login.html" class="block py-2 px-4 rounded hover:bg-red-700 text-red-300 mt-8">🚪 Sair</a>
+    </nav>
+  </aside>
+
+  <!-- Conteúdo -->
+  <main class="flex-1 p-6">
+    <h2 class="text-2xl font-bold text-[#0D1B2A] mb-6">🏫 Salas</h2>
+
+    <!-- Tabela de Salas -->
+    <div class="bg-white p-6 rounded-xl shadow-md">
+      <div class="flex justify-between items-center mb-4">
+        <h3 class="text-lg font-semibold text-blue-900">Lista de Salas</h3>
+        <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">+ Adicionar</button>
+      </div>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-blue-100 text-blue-900">
+              <th class="p-3">Nome da Sala</th>
+              <th class="p-3">Capacidade</th>
+              <th class="p-3">Bloco</th>
+              <th class="p-3">Ações</th>
+            </tr>
+          </thead>
+          <tbody class="text-gray-700">
+            <tr class="border-b">
+              <td class="p-3">Sala 101</td>
+              <td class="p-3">30</td>
+              <td class="p-3">A</td>
+              <td class="p-3 space-x-2">
+                <button class="text-yellow-500 hover:underline">Editar</button>
+                <button class="text-red-500 hover:underline">Remover</button>
+              </td>
+            </tr>
+            <tr class="border-b">
+              <td class="p-3">Sala 202</td>
+              <td class="p-3">25</td>
+              <td class="p-3">B</td>
+              <td class="p-3 space-x-2">
+                <button class="text-yellow-500 hover:underline">Editar</button>
+                <button class="text-red-500 hover:underline">Remover</button>
+              </td>
+            </tr>
+            <!-- Adicione mais salas aqui -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const usuarioLogado = localStorage.getItem("logado");
+    if (!usuarioLogado) {
+      window.location.href = "login.html";
+    }
+  </script>
+</body>
+</html>

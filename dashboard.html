@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard - Remanejador+</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex bg-blue-50 min-h-screen font-sans">
+
+  <!-- Sidebar -->
+  <aside class="w-64 bg-[#0D1B2A] text-white min-h-screen p-6">
+    <div class="flex items-center mb-10">
+      <img src="assets/pluslogo.png" alt="Logo" class="h-10 mr-2">
+    </div>
+    <nav class="space-y-4">
+      <a href="dashboard.html" class="block py-2 px-4 rounded bg-blue-900">🏠 Dashboard</a>
+      <a href="professores.html" class="block py-2 px-4 rounded hover:bg-blue-800">👨‍🏫 Professores</a>
+      <a href="salas.html" class="block py-2 px-4 rounded hover:bg-blue-800">🏫 Salas</a>
+      <a href="horarios.html" class="block py-2 px-4 rounded hover:bg-blue-800">📅 Horários</a>
+      <a href="formulario.html" class="block py-2 px-4 rounded hover:bg-blue-800">📝 Formulário</a>
+      <a href="calendario.html" class="block py-2 px-4 rounded hover:bg-blue-800">📆 Calendário</a>
+      <a href="login.html" class="block py-2 px-4 rounded hover:bg-red-700 text-red-300 mt-8">🚪 Sair</a>
+    </nav>
+  </aside>
+
+  <!-- Conteúdo -->
+  <main class="flex-1 p-6">
+    <!-- Boas-vindas -->
+    <h2 class="text-2xl font-bold text-[#0D1B2A] mb-6" id="boasVindas">Olá, Administrador 👋</h2>
+
+    <!-- Cards -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-white rounded-xl shadow-md p-6 border-l-4 border-blue-700">
+        <h3 class="text-sm text-gray-500">Professores Cadastrados</h3>
+        <p class="text-3xl font-bold text-[#0D1B2A]">35</p>
+      </div>
+      <div class="bg-white rounded-xl shadow-md p-6 border-l-4 border-yellow-400">
+        <h3 class="text-sm text-gray-500">Salas Disponíveis</h3>
+        <p class="text-3xl font-bold text-[#0D1B2A]">12</p>
+      </div>
+      <div class="bg-white rounded-xl shadow-md p-6 border-l-4 border-red-500">
+        <h3 class="text-sm text-gray-500">Remanejamentos Pendentes</h3>
+        <p class="text-3xl font-bold text-red-600">5</p>
+      </div>
+    </div>
+
+    <!-- Gráfico placeholder -->
+    <div class="mt-10">
+      <h2 class="text-lg font-semibold text-[#0D1B2A] mb-2">Resumo Mensal</h2>
+      <div class="w-full h-56 bg-gray-200 rounded flex items-center justify-center text-gray-600 italic">
+        Gráfico aqui futuramente 📊
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const usuarioLogado = localStorage.getItem("logado");
+    if (!usuarioLogado) {
+      window.location.href = "login.html";
+    } else {
+      const nomeUsuario = "Administrador";
+      document.getElementById("boasVindas").innerText = `Olá, ${nomeUsuario}! 👋`;
+    }
+  </script>
+</body>
+</html>

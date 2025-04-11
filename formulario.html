@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Formulário - Remanejador+</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex bg-blue-50 min-h-screen font-sans">
+
+  <!-- Sidebar -->
+  <aside class="w-64 bg-[#0D1B2A] text-white min-h-screen p-6">
+    <div class="flex items-center mb-10">
+      <img src="assets/pluslogo.png" alt="Logo" class="h-10 mr-2">
+    </div>
+    <nav class="space-y-4">
+      <a href="dashboard.html" class="block py-2 px-4 rounded hover:bg-blue-800">🏠 Dashboard</a>
+      <a href="professores.html" class="block py-2 px-4 rounded hover:bg-blue-800">👨‍🏫 Professores</a>
+      <a href="salas.html" class="block py-2 px-4 rounded hover:bg-blue-800">🏫 Salas</a>
+      <a href="horarios.html" class="block py-2 px-4 rounded hover:bg-blue-800">📅 Horários</a>
+      <a href="formulario.html" class="block py-2 px-4 rounded bg-blue-900">📝 Formulário</a>
+      <a href="calendario.html" class="block py-2 px-4 rounded hover:bg-blue-800">📆 Calendário</a>
+      <a href="login.html" class="block py-2 px-4 rounded hover:bg-red-700 text-red-300 mt-8">🚪 Sair</a>
+    </nav>
+  </aside>
+
+  <!-- Conteúdo -->
+  <main class="flex-1 p-6">
+    <h2 class="text-2xl font-bold text-[#0D1B2A] mb-6">📝 Formulário de Remanejamento</h2>
+
+    <div class="bg-white p-6 rounded-xl shadow-md w-full max-w-2xl">
+      <form class="space-y-4">
+        <div>
+          <label class="block font-medium text-gray-700">Professor</label>
+          <input type="text" class="w-full mt-1 p-2 border rounded" placeholder="Nome do professor" />
+        </div>
+
+        <div>
+          <label class="block font-medium text-gray-700">Turma</label>
+          <input type="text" class="w-full mt-1 p-2 border rounded" placeholder="Ex: 6º Ano A" />
+        </div>
+
+        <div>
+          <label class="block font-medium text-gray-700">Motivo</label>
+          <textarea class="w-full mt-1 p-2 border rounded" placeholder="Descreva o motivo do remanejamento..."></textarea>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label class="block font-medium text-gray-700">Data</label>
+            <input type="date" class="w-full mt-1 p-2 border rounded" />
+          </div>
+
+          <div>
+            <label class="block font-medium text-gray-700">Horário</label>
+            <input type="time" class="w-full mt-1 p-2 border rounded" />
+          </div>
+        </div>
+
+        <div>
+          <label class="block font-medium text-gray-700">Sala Alternativa</label>
+          <input type="text" class="w-full mt-1 p-2 border rounded" placeholder="Ex: Sala 203" />
+        </div>
+
+        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded">
+          Enviar Remanejamento
+        </button>
+      </form>
+    </div>
+  </main>
+
+  <script>
+    const usuarioLogado = localStorage.getItem("logado");
+    if (!usuarioLogado) {
+      window.location.href = "login.html";
+    }
+  </script>
+</body>
+</html>
