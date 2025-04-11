@@ -4,6 +4,17 @@ Projeto acadêmico desenvolvido pelos alunos da **Faculdade Fundação Santo And
 
 ---
 
+## 👥 Equipe responsável
+
+- Gabriel Foganholi  
+- Mateus Dotti  
+- Danilo Peres  
+- Gustavo Morgado  
+- Caio Higino  
+- Guilherme Cardoso
+
+---
+
 O **Remanejador+** é um sistema web criado com o objetivo de facilitar e automatizar o processo de remanejamento de aulas em instituições de ensino. A proposta do projeto é eliminar os conflitos manuais de alocação de professores, salas e horários, oferecendo uma solução moderna, rápida e eficiente para as escolas.
 
 No início do ano letivo, os professores poderão preencher um formulário com suas disponibilidades, disciplinas que lecionam e preferências de horário. Com base nesses dados, o sistema irá gerar um calendário anual de aulas, minimizando erros, otimizando o tempo da equipe gestora e facilitando a organização pedagógica.
@@ -60,13 +71,6 @@ Para acessar o painel de controle do sistema, use o login:
 
 ---
 
-## 👥 Equipe responsável
 
-- Gabriel Foganholi  
-- Mateus Dotti  
-- Danilo Peres  
-- Gustavo Morgado  
-- Caio Higino  
-- Guilherme Cardoso
 
----
+
